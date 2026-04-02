@@ -1,6 +1,9 @@
 package greeter;
 
 import greeter.Greeter;
+import org.junit.jupiter.api.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class GreeterTest {
     @Test
