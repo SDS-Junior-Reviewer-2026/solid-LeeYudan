@@ -10,15 +10,10 @@ public class WeatherTracker {
         email = new Email();
     }
 
-    public void setCurrentConditions(String weatherDescription) {
-        this.currentConditions = weatherDescription;
-        if (weatherDescription == "rainy") {
-            String alert = phone.generateWeatherAlert(weatherDescription);
-            System.out.print(alert);
-        }
-        if (weatherDescription == "sunny") {
-            String alert = email.generateWeatherAlert(weatherDescription);
-            System.out.print(alert);
-        }
+    public void setCurrentConditions(String weatherDescription){
+        currentConditions = weatherDescription;
+        WeatherFactory weatherFactory = new WeatherFactory();
+        weatherFactory.setCurrentConditions(currentConditions);
     }
+
 }
